@@ -10,6 +10,12 @@ void init_randomness()
 	return;
 }
 
+int random_int(int min, int max)
+{
+	int range = max - min;
+	return rand()%range + min;
+}
+
 int main(int argc, char *argv[])
 {
 	int x, y, result, answer;
@@ -19,8 +25,8 @@ int main(int argc, char *argv[])
 
 	for(;;)
 	{
-		x = (rand()%9) + 1;
-		y = (rand()%9) + 1;
+		x = random_int(1,8);
+		y = random_int(1,3);
 		result = x + y;
 		printf("%i + %i = ",x,y);
 		if(!scanf("%i",&answer))
