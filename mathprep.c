@@ -16,9 +16,31 @@ int random_int(int min, int max)
 	return rand()%range + min;
 }
 
+int ask(int x, int y)
+{
+	int answer, result;
+
+	result=x+y;
+
+	for(;;)
+	{
+		printf("%i + %i = ",x,y);
+		if(!scanf("%i",&answer))
+			return 0;
+		if(result==answer)
+		{
+			printf("Oikein!\n\n");
+			return 1;
+		} else
+		{
+			printf("Ei ihan. Koita uudestaan!\n");
+		}
+	}
+}
+
 int main(int argc, char *argv[])
 {
-	int x, y, prev_x, prev_y, result, answer;
+	int x, y, prev_x, prev_y;
 
 	printf("mathprep\n\n");
 	init_randomness();
@@ -35,13 +57,10 @@ int main(int argc, char *argv[])
 			x = random_int(1,8);
 			y = random_int(1,3);
 		} while (x==prev_x && y==prev_y);
-		result = x + y;
 
-		printf("%i + %i = ",x,y);
-		if(!scanf("%i",&answer))
+		if(!ask(x,y))
 			break;
-
-		printf( (result==answer) ? "Correct!\n\n" : "Wrong...\n\n" );
 	}
+	
 	exit(0);
 }
