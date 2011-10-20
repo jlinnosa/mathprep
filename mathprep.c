@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 			y = random_int(1,3);
 		} while (x==prev_x && y==prev_y);
 
-		if(!ask(x,y))
+		if(!ask(x,y,'+'))
 			break;
 	}
 	

@@ -4,10 +4,12 @@
 /*
  * Define the user interface functions.
  *
- * I guess I'll have to implement different operands as soon as
- * the kids learn them...
  */
 
-int ask(int x, int y);
+/*
+ * op := '+','-','*','/'
+ */
+
+int ask(int x, int y, char op);
 
 #endif /* UI_H */

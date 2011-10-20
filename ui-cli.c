@@ -5,7 +5,7 @@
  * The text interface.
  */
 
-int ask(int x, int y)
+int ask(int x, int y, char op)
 {
 	int answer, result;
 
