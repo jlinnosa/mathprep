@@ -9,7 +9,23 @@ int ask(int x, int y, char op)
 {
 	int answer, result;
 
-	result=x+y;
+	switch (op) {
+	case '+':
+		result = x + y;
+		break;
+	case '-':
+		result = x - y;
+		break;
+	case '*':
+		result = x * y;
+		break;
+	case '/':
+		result = x / y;
+		break;
+	default:
+		/* illegal operand */
+		return 0;
+	}
 
 	for(;;)
 	{
