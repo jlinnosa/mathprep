@@ -39,6 +39,6 @@ int main(int argc, char *argv[])
 		if (!ask(x, y, '+'))
 			break;
 	}
-	
-	exit(0);
+
+	exit(EXIT_SUCCESS);
 }
