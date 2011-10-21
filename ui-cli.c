@@ -27,17 +27,14 @@ int ask(int x, int y, char op)
 		return 0;
 	}
 
-	for(;;)
-	{
-		printf("%i + %i = ",x,y);
-		if(!scanf("%i",&answer))
+	for (;;) {
+		printf("%i %c %i = ", x, op, y);
+		if (!scanf("%i", &answer))
 			return 0;
-		if(result==answer)
-		{
+		if (result == answer) {
 			printf("Oikein!\n\n");
 			return 1;
-		} else
-		{
+		} else {
 			printf("Ei ihan. Koita uudestaan!\n");
 		}
 	}

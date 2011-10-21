@@ -6,7 +6,7 @@
 void init_randomness()
 {
 	struct timeval t;
-	gettimeofday(&t,0);
+	gettimeofday(&t, 0);
 	srand(t.tv_usec);
 	return;
 }
@@ -14,7 +14,7 @@ void init_randomness()
 int random_int(int min, int max)
 {
 	int range = max - min;
-	return rand()%range + min;
+	return rand() % range + min;
 }
 
 
@@ -27,18 +27,16 @@ int main(int argc, char *argv[])
 
 	x = y = 0;
 
-	for(;;)
-	{
+	for (;;) {
 		prev_x = x;
 		prev_y = y;
 
-		do
-		{
-			x = random_int(1,8);
-			y = random_int(1,3);
-		} while (x==prev_x && y==prev_y);
+		do {
+			x = random_int(1, 8);
+			y = random_int(1, 3);
+		} while (x == prev_x && y == prev_y);
 
-		if(!ask(x,y,'+'))
+		if (!ask(x, y, '+'))
 			break;
 	}
 	

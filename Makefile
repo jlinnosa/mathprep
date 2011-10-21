@@ -10,3 +10,6 @@ mathprep.o: ui.h
 
 clean:
 	rm mathprep *.o
+
+indent:
+	indent -kr -i8 *.c *.h

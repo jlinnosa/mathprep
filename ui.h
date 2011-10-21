@@ -12,4 +12,4 @@
 
 int ask(int x, int y, char op);
 
-#endif /* UI_H */
+#endif				/* UI_H */
