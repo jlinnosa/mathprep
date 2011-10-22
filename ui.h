@@ -6,10 +6,6 @@
  *
  */
 
-/*
- * op := '+','-','*','/'
- */
-
-int ask(int x, int y, char op);
+int ask(char *str, int result);
 
 #endif				/* UI_H */

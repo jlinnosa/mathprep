@@ -5,30 +5,12 @@
  * The text interface.
  */
 
-int ask(int x, int y, char op)
+int ask(char *str, int result)
 {
-	int answer, result;
-
-	switch (op) {
-	case '+':
-		result = x + y;
-		break;
-	case '-':
-		result = x - y;
-		break;
-	case '*':
-		result = x * y;
-		break;
-	case '/':
-		result = x / y;
-		break;
-	default:
-		/* illegal operand */
-		return 0;
-	}
+	int answer;
 
 	for (;;) {
-		printf("%i %c %i = ", x, op, y);
+		printf("%s = ", str);
 		if (!scanf("%i", &answer))
 			return 0;
 		if (result == answer) {
