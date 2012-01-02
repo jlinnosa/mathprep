@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/time.h>
+#include <assert.h>
 #include "ui.h"
 
 #define BUFFSIZE 100
@@ -15,7 +16,8 @@ void init_randomness()
 
 int random_int(int min, int max)
 {
-	int range = max - min;
+	assert(max > min);
+	int range = (max+1) - min;
 	return rand() % range + min;
 }
 
