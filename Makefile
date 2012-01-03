@@ -9,7 +9,7 @@ mathprep: mathprep.o ui-cli.o
 mathprep.o: ui.h
 
 clean:
-	rm mathprep *.o
+	rm -f -- mathprep *.o *~
 
 indent:
 	indent -kr -i8 *.c *.h
