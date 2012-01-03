@@ -3,10 +3,10 @@ CC=gcc
 
 all: mathprep
 
-mathprep: mathprep.o ui-cli.o
-	$(CC) $(CFLAGS) -o mathprep mathprep.o ui-cli.o
+mathprep: mathprep.o ui-cli.o tools.o
+	$(CC) $(CFLAGS) -o mathprep mathprep.o ui-cli.o tools.o
 
-mathprep.o: ui.h
+mathprep.o: ui.h tools.h
 
 clean:
 	rm -f -- mathprep *.o *~
